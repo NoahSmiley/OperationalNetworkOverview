@@ -1,46 +1,41 @@
 import React, { useEffect, useState } from "react";
 import file from "../data.json";
-import { Card, ListGroupItem, ListGroup } from "react-bootstrap";
+import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "./voltage.png";
 
 const abrv = file.s;
-const pmas = file.PMAS;
+const batv = file.BATV;
 
 const buildMap = (keys, values) => {
   const map = new Map();
   for (let i = 0; i < keys.length; i++) {
-    map.set(keys[i], " | " + Math.round(values[i] * 1000));
+    map.set(keys[i], " | " + values[i]);
   }
   return map;
 };
-
-let result = buildMap(abrv, pmas);
+let result = buildMap(abrv, batv);
 var arr = Array.from(result.entries());
-console.log(result.keys());
 
-const Data = () => {
+const BATV = () => {
   return (
     <Card
       style={{
+        height:"40vw",
+        width: "10rem",
         display: "flexbox",
-        width:"100%",
         flexDirection: "col",
         overflow: "scroll",
         fontSize:"20px",
-        color:"black",
-        height:"40vw",
-
+        position:"flex",
       }}
     >
       <Card.Body style ={{textAlign:"center",display:"flexbox"}}>
-        <Card.Title style = {{"font-weight":"bolder"}}>PMAS</Card.Title>
-        {/* <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text> */}
+        <Card.Title style = {{"font-weight":"bolder"}}>BATV</Card.Title>
       </Card.Body>
       {arr.map((item) => (
         <ListGroup className="list-group-flush">
-          <ListGroupItem style ={{textAlign:"center",display:"flexbox"}}>{item}</ListGroupItem>
+          <ListGroupItem>{item}</ListGroupItem>
         </ListGroup>
       ))}
       <Card.Body>
@@ -50,4 +45,4 @@ const Data = () => {
     </Card>
   );
 };
-export default Data;
+export default BATV;
