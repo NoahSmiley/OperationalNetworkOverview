@@ -4,6 +4,7 @@ import PMAS from './Components/PMAS';
 import file from './data.json';
 import Navigation from './Components/Navigation';
 import BATV from './Components/BATV';
+import DelayedTime from './Components/DelayedTime'
 
 
 
@@ -12,8 +13,11 @@ function App() {
   return (
 
     <div className="container"style = {{background:"#CA1C0D",display:"flexbox"}}>
-      <div className="item"><BATV/></div>
-        <div className="item" style = {{display:"flexbox"}}><PMAS/></div>
+      <div className="item"style={{display:"flexbox"}}><BATV/></div>
+      <div className="item"style={{display:"flexbox"}}><DelayedTime/></div>
+        <div className="item"style={{display:"flexbox"}} ><PMAS/></div>
+        <div className="item" style={{display:"flexbox"}}><BATV/></div>
+
         <div className="item"><Navigation/></div>
     </div>
 

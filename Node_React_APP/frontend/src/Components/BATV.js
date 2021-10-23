@@ -21,7 +21,7 @@ const BATV = () => {
   return (
     <Card
       style={{
-        height:"40vw",
+        height:"37vw",
         width: "10rem",
         display: "flexbox",
         flexDirection: "col",
@@ -38,10 +38,6 @@ const BATV = () => {
           <ListGroupItem>{item}</ListGroupItem>
         </ListGroup>
       ))}
-      <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body>
     </Card>
   );
 };
