@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import file from "../data.json";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "./voltage.png";
 
 const abrv = file.s;
 const batv = file.BATV;

@@ -1,9 +1,7 @@
-import { Card, Carousel } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 import BATV from "../BATV";
 import PMAS from "../PMAS";
-import Navigation from "../Navigation";
 import DelayedTime from "../DelayedTime";
-import image from "./Mesonet.jpeg";
 import ImageSlideShow from "./ImageSlideShow";
 import Technician from "../Technician";
 

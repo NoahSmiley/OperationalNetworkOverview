@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import file from "../data.json";
 import { Card, ListGroupItem, ListGroup } from "react-bootstrap";
 
