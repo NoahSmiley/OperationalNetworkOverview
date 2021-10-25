@@ -1,66 +1,64 @@
 import React, { useEffect, useState } from "react";
 import file from "../data.json";
-import { Card, ListGroupItem, ListGroup } from "react-bootstrap";
+import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "./voltage.png";
 
 const abrv = file.s;
-const pmas = file.PMAS;
+const batv = file.BATV;
 
 const buildMap = (keys, values) => {
   const map = new Map();
   for (let i = 0; i < keys.length; i++) {
-    map.set(keys[i], "  ||  " + Math.round(values[i] * 1000));
+    map.set(keys[i]);
   }
   return map;
 };
-
-let result = buildMap(abrv, pmas);
+let result = buildMap(abrv, batv);
 var arr = Array.from(result.entries());
-console.log(result.keys());
 
-const Data = () => {
+const Technician = () => {
   return (
     <div>
       <Card
         style={{
           display: "flexbox",
-          width: "100%",
+          width: "120%",
           flexDirection: "col",
           overflow: "scroll",
-          fontSize: "20px",
+          fontSize: "25px",
           color: "black",
-          "margin-left": "-25%",
+          "margin-left": "-40%",
           // "margin-left":"30px",
           //  "margin-right" :"30px",
         }}
       >
         <Card.Body style={{ textAlign: "center", display: "flexbox" }}>
-          <Card.Title style={{ "font-weight": "bolder",fontSize: "25px", }}>PMAS</Card.Title>
+          <Card.Title style={{ "font-weight": "bolder",fontSize: "25px",}}>STATIONS IN SERVICE</Card.Title>
         </Card.Body>
       </Card>
       <Card
         style={{
           display: "flexbox",
-          width: "100%",
+          width: "120%",
           flexDirection: "col",
           overflow: "scroll",
           fontSize: "20px",
           color: "black",
           height: "37vw",
-          "margin-left": "-25%",
+          "margin-left": "-40%",
+
           // "margin-left":"30px",
           //  "margin-right" :"30px",
         }}
       >
-        
         {arr.map((item) => (
           <ListGroup className="list-group-flush">
-            <ListGroupItem style={{ textAlign: "center", display: "flexbox",background:"#f9f9f9"}}>
-              {item}
-            </ListGroupItem>
+            <ListGroupItem style={{ textAlign: "center", display: "flexbox",background:"#f9f9f9"}} >{item}</ListGroupItem>
           </ListGroup>
         ))}
       </Card>
     </div>
   );
 };
-export default Data;
+export default Technician;

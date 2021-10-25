@@ -19,26 +19,46 @@ var arr = Array.from(result.entries());
 
 const BATV = () => {
   return (
-    <Card
-      style={{
-        height:"37vw",
-        width: "10rem",
-        display: "flexbox",
-        flexDirection: "col",
-        overflow: "scroll",
-        fontSize:"20px",
-        position:"flex",
-      }}
-    >
-      <Card.Body style ={{textAlign:"center",display:"flexbox"}}>
-        <Card.Title style = {{"font-weight":"bolder"}}>BATV</Card.Title>
-      </Card.Body>
-      {arr.map((item) => (
-        <ListGroup className="list-group-flush">
-          <ListGroupItem>{item}</ListGroupItem>
-        </ListGroup>
-      ))}
-    </Card>
+    <div>
+      <Card
+        style={{
+          display: "flexbox",
+          width: "75%",
+          flexDirection: "col",
+          overflow: "scroll",
+          fontSize: "25px",
+          color: "black",
+          "margin-left": "-20%",
+          // "margin-left":"30px",
+          //  "margin-right" :"30px",
+        }}
+      >
+        <Card.Body style={{ textAlign: "center", display: "flexbox" }}>
+          <Card.Title style={{ "font-weight": "bolder",fontSize: "25px",}}>BATV</Card.Title>
+        </Card.Body>
+      </Card>
+      <Card
+        style={{
+          display: "flexbox",
+          width: "75%",
+          flexDirection: "col",
+          overflow: "scroll",
+          fontSize: "20px",
+          color: "black",
+          height: "37vw",
+          "margin-left": "-20%",
+
+          // "margin-left":"30px",
+          //  "margin-right" :"30px",
+        }}
+      >
+        {arr.map((item) => (
+          <ListGroup className="list-group-flush">
+            <ListGroupItem style={{ textAlign: "center", display: "flexbox",background:"#f9f9f9"}} >{item}</ListGroupItem>
+          </ListGroup>
+        ))}
+      </Card>
+    </div>
   );
 };
 export default BATV;
