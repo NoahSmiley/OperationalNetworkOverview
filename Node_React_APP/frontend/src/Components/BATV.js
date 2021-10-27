@@ -44,7 +44,7 @@ const BATV = () => {
           overflow: "scroll",
           fontSize: "20px",
           color: "black",
-          height: "37vw",
+          height: "33.95vw",
           "margin-left": "-20%",
 
           // "margin-left":"30px",

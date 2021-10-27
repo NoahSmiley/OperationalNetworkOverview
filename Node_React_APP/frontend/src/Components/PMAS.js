@@ -44,7 +44,7 @@ const Data = () => {
           overflow: "scroll",
           fontSize: "20px",
           color: "black",
-          height: "37vw",
+          height: "33.95vw",
           "margin-left": "-25%",
           // "margin-left":"30px",
           //  "margin-right" :"30px",

@@ -9,7 +9,7 @@ const ImageSlideShow = () => {
         "margin-left": "auto",
         "margin-right": "auto",
         width: "50%",
-        "margin-top":"5%",
+        "margin-top":"1.5%"
       }}
       interval={null}
       indicators={false}

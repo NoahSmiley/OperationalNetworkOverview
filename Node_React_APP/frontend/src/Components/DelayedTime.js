@@ -21,13 +21,13 @@ const DelayedTime = () => {
     <div>
       <Card
         style={{
-          display: "flexbox",
-          width: "150%",
-          flexDirection: "col",
-          overflow: "scroll",
-          fontSize: "25px",
-          color: "black",
-          "margin-left": "-60%",
+            display: "flexbox",
+            width: "150%",
+            flexDirection: "col",
+            overflow: "scroll",
+            fontSize: "25px",
+            color: "black",
+            "margin-left": "-60%",
           // "margin-left":"30px",
           //  "margin-right" :"30px",
         }}
@@ -47,7 +47,7 @@ const DelayedTime = () => {
           overflow: "scroll",
           fontSize: "20px",
           color: "black",
-          height: "16.25vw",
+          height: "13.5vw",
           "margin-left": "-60%",
 
           // "margin-left":"30px",
@@ -92,7 +92,7 @@ const DelayedTime = () => {
           overflow: "scroll",
           fontSize: "20px",
           color: "black",
-          height: "16.25vw",
+          height: "13.5vw",
           "margin-left": "-60%",
 
           // "margin-left":"30px",
