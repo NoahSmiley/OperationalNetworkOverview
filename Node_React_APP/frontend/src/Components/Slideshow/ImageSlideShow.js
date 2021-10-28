@@ -1,5 +1,5 @@
 import { Carousel } from "react-bootstrap";
-import image from "./Mesonet.jpeg";
+import image from "./images/Mesonet.jpeg";
 import "./SlideShow.css";
 const ImageSlideShow = () => {
   return (
