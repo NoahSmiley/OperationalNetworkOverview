@@ -5,7 +5,7 @@
   overflow: scroll;
   font-size: 20px;
   color: black;
-  margin-left: -25%;
+  margin-left: -20%;
 }
 .pmas_card_header_body {
   text-align: center;
@@ -19,7 +19,7 @@
   font-size: 20px;
   color: black;
   height: 33.95vw;
-  margin-left: -25%;
+  margin-left: -20%;
 }
 .pmas_title {
   font-weight: bolder;

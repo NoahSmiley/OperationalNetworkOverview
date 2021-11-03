@@ -45,6 +45,7 @@ function App() {
     if (history.location.pathname === "/images") {
       history.push("/maps");
       window.location.reload(false);
+
     } else if (history.location.pathname === "/") {
       console.log(history.location);
       history.push("/images");
@@ -62,8 +63,8 @@ function App() {
     <div>
       <Switch>
         <Route exact path="/" component={CentralReport} />
-        <Route path="/images" component={ImageSlideShow} />
-        <Route path="/maps" component={MapSlideShow} />
+        <Route exact path="/images" component={ImageSlideShow} />
+        <Route exact path="/maps" component={MapSlideShow} />
       </Switch>
 
       {/* NavBar */}

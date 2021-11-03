@@ -5,7 +5,7 @@
   overflow: scroll;
   font-size: 25px;
   color: black;
-  margin-left: -40%;
+  margin-left: -35%;
 }
 .tech_card_header_body {
   text-align: center;
@@ -23,7 +23,7 @@
     font-Size: 20px;
     color: black;
     height: 33.95vw;
-    margin-left: -40%;
+    margin-left: -35%;
 }
 .tech_list{
     text-Align: center;
