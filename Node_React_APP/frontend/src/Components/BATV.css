@@ -1,0 +1,36 @@
+.card_header {
+  display: flexbox;
+  width: 75%;
+  flex-direction: col;
+  overflow: scroll;
+  font-size: 25px;
+  color: black;
+  margin-left: -20%;
+}
+
+.card_title {
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.card_header_body{
+    text-Align: center;
+     display: flexbox;
+}
+
+.card_body{
+    display: flexbox;
+    width: 75%;
+    flex-Direction: col;
+    overflow: scroll;
+    font-Size: 20px;
+    color: black;
+    height: 33.95vw;
+    margin-left: -20%;
+}
+
+.list_group{
+    text-Align: center;
+    display: flexbox;
+    background: #f9f9f9;
+}

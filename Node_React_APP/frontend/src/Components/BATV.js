@@ -1,11 +1,13 @@
 import file from "../data.json";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./BATV.css";
 
-
+//Declaring path to Country Abbreviation and BATV Values
 const abrv = file.s;
 const batv = file.BATV;
 
+//Function to map the Two values into a hashmap with a "|" Divider
 const buildMap = (keys, values) => {
   const map = new Map();
   for (let i = 0; i < keys.length; i++) {
@@ -13,47 +15,28 @@ const buildMap = (keys, values) => {
   }
   return map;
 };
+
+//Calls the BuildMap Function and assigns to var result, and then cast to array.
 let result = buildMap(abrv, batv);
 var arr = Array.from(result.entries());
 
 const BATV = () => {
   return (
     <div>
-      <Card
-        style={{
-          display: "flexbox",
-          width: "75%",
-          flexDirection: "col",
-          overflow: "scroll",
-          fontSize: "25px",
-          color: "black",
-          "margin-left": "-20%",
-          // "margin-left":"30px",
-          //  "margin-right" :"30px",
-        }}
-      >
-        <Card.Body style={{ textAlign: "center", display: "flexbox" }}>
-          <Card.Title style={{ "font-weight": "bolder",fontSize: "25px",}}>BATV</Card.Title>
+      {/* Card Header */}
+      <Card className="card_header">
+        <Card.Body className="card_header_body">
+          <Card.Title className="card_title">BATV</Card.Title>
         </Card.Body>
       </Card>
-      <Card
-        style={{
-          display: "flexbox",
-          width: "75%",
-          flexDirection: "col",
-          overflow: "scroll",
-          fontSize: "20px",
-          color: "black",
-          height: "33.95vw",
-          "margin-left": "-20%",
 
-          // "margin-left":"30px",
-          //  "margin-right" :"30px",
-        }}
-      >
+      {/* Card Body */}
+      <Card className="card_body">
+
+        {/* Maps Items from array to card list */}
         {arr.map((item) => (
           <ListGroup className="list-group-flush">
-            <ListGroupItem style={{ textAlign: "center", display: "flexbox",background:"#f9f9f9"}} >{item}</ListGroupItem>
+            <ListGroupItem className="list_group">{item}</ListGroupItem>
           </ListGroup>
         ))}
       </Card>
