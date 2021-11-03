@@ -1,9 +1,12 @@
 import file from "../Data/data.json";
 import { Card, ListGroupItem, ListGroup } from "react-bootstrap";
+import "./PMAS.css";
 
+//Declaring path to Country Abbreviation and pmas Values
 const abrv = file.s;
 const pmas = file.PMAS;
 
+//Function to map the Two values into a hashmap with a " || " Divider
 const buildMap = (keys, values) => {
   const map = new Map();
   for (let i = 0; i < keys.length; i++) {
@@ -12,50 +15,26 @@ const buildMap = (keys, values) => {
   return map;
 };
 
+//Calls the BuildMap Function and assigns to var result, and then cast to array.
 let result = buildMap(abrv, pmas);
 var arr = Array.from(result.entries());
-console.log(result.keys());
 
 const Data = () => {
   return (
     <div>
-      <Card
-        style={{
-          display: "flexbox",
-          width: "100%",
-          flexDirection: "col",
-          overflow: "scroll",
-          fontSize: "20px",
-          color: "black",
-          "margin-left": "-25%",
-          // "margin-left":"30px",
-          //  "margin-right" :"30px",
-        }}
-      >
-        <Card.Body style={{ textAlign: "center", display: "flexbox" }}>
-          <Card.Title style={{ "font-weight": "bolder",fontSize: "25px", }}>PMAS</Card.Title>
+      {/* Card Header */}
+      <Card className="pmas_card_header">
+        <Card.Body className="pmas_card_header_body">
+          <Card.Title className="pmas_title">PMAS</Card.Title>
         </Card.Body>
       </Card>
-      <Card
-        style={{
-          display: "flexbox",
-          width: "100%",
-          flexDirection: "col",
-          overflow: "scroll",
-          fontSize: "20px",
-          color: "black",
-          height: "33.95vw",
-          "margin-left": "-25%",
-          // "margin-left":"30px",
-          //  "margin-right" :"30px",
-        }}
-      >
-        
+
+      {/* Card Body */}
+      <Card className="pmas_card_body">
+        {/* Maps Items from array to card list */}
         {arr.map((item) => (
           <ListGroup className="list-group-flush">
-            <ListGroupItem style={{ textAlign: "center", display: "flexbox",background:"#f9f9f9"}}>
-              {item}
-            </ListGroupItem>
+            <ListGroupItem className="pmas_list">{item}</ListGroupItem>
           </ListGroup>
         ))}
       </Card>
