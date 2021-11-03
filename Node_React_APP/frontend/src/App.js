@@ -6,10 +6,10 @@ import CentralReport from "./Components/Central Report/CentralReport";
 import ImageSlideShow from "./Components/Slideshow/ImageSlideShow";
 import MapSlideShow from "./Components/Slideshow/MapSlideShow";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { useHistory } from "react-router";
 
 function useKey(key, cb) {
   const callbackRef = useRef(cb);
-
   useEffect(() => {
     callbackRef.current = cb;
   });
@@ -25,19 +25,42 @@ function useKey(key, cb) {
 }
 
 function App() {
+
+  const history = useHistory();
   function handleArrowLeft() {
-    console.log("Left");
+    if (history.location.pathname === "/images") {
+      history.push("/central-report");
+      window.location.reload(false);
+    } else if (history.location.pathname === "/central-report") {
+      console.log(history.location);
+      history.push("/maps");
+      window.location.reload(false);
+    } else if (history.location.pathname === "/maps") {
+      console.log(history.location);
+      history.push("/images");
+      window.location.reload(false);
+    }
   }
   function handleArrowRight() {
-    console.log("Right");
+    if (history.location.pathname === "/images") {
+      history.push("/maps");
+      window.location.reload(false);
+    } else if (history.location.pathname === "/central-report") {
+      console.log(history.location);
+      history.push("/images");
+      window.location.reload(false);
+    } else if (history.location.pathname === "/maps") {
+      console.log(history.location);
+      history.push("/central-report");
+      window.location.reload(false);
+    }
+  
   }
   useKey("ArrowLeft", handleArrowLeft);
   useKey("ArrowRight", handleArrowRight);
 
   return (
     <div>
-      {/* Switch Controles React Router - and links the navbar to components */}
-
       <Switch>
         <Route exact path="/central-report" component={CentralReport} />
         <Route path="/images" component={ImageSlideShow} />
@@ -49,5 +72,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
