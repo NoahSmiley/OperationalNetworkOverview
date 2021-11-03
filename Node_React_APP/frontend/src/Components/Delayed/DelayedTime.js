@@ -1,9 +1,12 @@
 import file from "../Data/data.json";
 import { Card, ListGroupItem, ListGroup } from "react-bootstrap";
+import "./Delayed.css";
 
+//Declaring path to Country Abbreviation and times Values
 const abrv = file.s;
-const pmas = file.central;
+const times = file.central;
 
+//Function to map the Two values into a hashmap with a " || " Divider
 const buildMap = (keys, values) => {
   const map = new Map();
   for (let i = 0; i < keys.length; i++) {
@@ -12,97 +15,47 @@ const buildMap = (keys, values) => {
   return map;
 };
 
-let result = buildMap(abrv, pmas);
+//Calls the BuildMap Function and assigns to var result, and then cast to array.
+let result = buildMap(abrv, times);
 var arr = Array.from(result.entries());
 console.log(result.keys());
 
 const DelayedTime = () => {
   return (
     <div>
-      <Card
-        style={{
-            display: "flexbox",
-            width: "150%",
-            flexDirection: "col",
-            overflow: "scroll",
-            fontSize: "25px",
-            color: "black",
-            "margin-left": "-60%",
-          // "margin-left":"30px",
-          //  "margin-right" :"30px",
-        }}
-      >
-        <Card.Body style={{ textAlign: "center", display: "flexbox" }}>
-          <Card.Title style={{ "font-weight": "bolder", fontSize: "25px" }}>
+      {/* Card Header */}
+      <Card className="time_card_header">
+        <Card.Body className="time_card_header_body">
+          <Card.Title className="time_card_title">
             EXTREMELY DELAYED TIME
           </Card.Title>
         </Card.Body>
-
       </Card>
-      <Card
-        style={{
-          display: "flexbox",
-          width: "150%",
-          flexDirection: "col",
-          overflow: "scroll",
-          fontSize: "20px",
-          color: "black",
-          height: "13.5vw",
-          "margin-left": "-60%",
-
-          // "margin-left":"30px",
-          //  "margin-right" :"30px",
-        }}
-      >
-
+      {/* Card Body */}
+      <Card className="time_card_body">
+        {/* Maps Items from array to card list */}
         {arr.map((item) => (
           <ListGroup className="list-group-flush">
-            <ListGroupItem style={{ textAlign: "center", display: "flexbox" }}>
+            <ListGroupItem className="time_card_header_body">
               {item}
             </ListGroupItem>
           </ListGroup>
         ))}
       </Card>
-      <Card
-        style={{
-          display: "flexbox",
-          width: "150%",
-          flexDirection: "col",
-          overflow: "scroll",
-          fontSize: "25px",
-          color: "black",
-          "margin-left": "-60%",
-          "margin-top": "5%",
-          // "margin-left":"30px",
-          //  "margin-right" :"30px",
-        }}
-      >
-        <Card.Body style={{ textAlign: "center", display: "flexbox" }}>
-          <Card.Title style={{ "font-weight": "bolder", fontSize: "25px" }}>
-            DELAYED TIME
-          </Card.Title>
+
+      {/* Card Header */}
+      <Card className="time_card_header_bottom">
+        <Card.Body className="time_card_header_body">
+          <Card.Title className="time_card_title">DELAYED TIME</Card.Title>
         </Card.Body>
-
       </Card>
-      <Card
-        style={{
-          display: "flexbox",
-          width: "150%",
-          flexDirection: "col",
-          overflow: "scroll",
-          fontSize: "20px",
-          color: "black",
-          height: "13.5vw",
-          "margin-left": "-60%",
 
-          // "margin-left":"30px",
-          //  "margin-right" :"30px",
-        }}
-      >
-
+      {/* Card Body */}
+      <Card className="time_card_body">
+        {/* Maps Items from array to card list */}
         {arr.map((item) => (
           <ListGroup className="list-group-flush">
-            <ListGroupItem style={{ textAlign: "center", display: "flexbox" }}>
+            <ListGroupItem className="time_card_header_body">
               {item}
             </ListGroupItem>
           </ListGroup>

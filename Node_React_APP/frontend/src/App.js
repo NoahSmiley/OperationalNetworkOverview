@@ -14,6 +14,8 @@ function App() {
             <Route path="/images" component={ImageSlideShow} />
             <Route path="/maps" component={MapSlideShow} />
         </Switch>
+
+        {/* NavBar */}
         <Navigation/>
     </div>
   );

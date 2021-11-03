@@ -1,28 +1,26 @@
-import React from 'react';
-import BATV from '../BATV/BATV';
-import DelayedTime from '../Delayed/DelayedTime';
-import PMAS from '../PMAS/PMAS';
-import Technician from '../Technician/Technician';
+import React from "react";
+import BATV from "../BATV/BATV";
+import DelayedTime from "../Delayed/DelayedTime";
+import PMAS from "../PMAS/PMAS";
+import Technician from "../Technician/Technician";
 
+//Central Report Component, Collects all subcomponents into one modular Section
 const CentralReport = () => {
-    return (
-        <div
-            className="container"
-            style={{background: "#CA1C0D;", display: "flexbox"}}
-        >
-            <div className="item" style={{display: "flexbox"}}>
-                <BATV/>
-            </div>
-            <div className="item" style={{display: "flexbox"}}>
-                <DelayedTime/>
-            </div>
-            <div className="item" style={{display: "flexbox"}}>
-                <PMAS/>
-            </div>
-            <div className="item" style={{display: "flexbox"}}>
-                <Technician/>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="container">
+      <div className="item">
+        <BATV />
+      </div>
+      <div className="item">
+        <DelayedTime />
+      </div>
+      <div className="item">
+        <PMAS />
+      </div>
+      <div className="item">
+        <Technician />
+      </div>
+    </div>
+  );
+};
 export default CentralReport;

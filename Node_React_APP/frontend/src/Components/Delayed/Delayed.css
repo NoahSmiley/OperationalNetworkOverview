@@ -1,0 +1,40 @@
+.time_card_header {
+  display: flexbox;
+  width: 150%;
+  flex-direction: col;
+  overflow: scroll;
+  font-size: 25px;
+  color: black;
+  margin-left: -60%;
+}
+.time_card_header_bottom {
+  display: flexbox;
+  width: 150%;
+  flex-direction: col;
+  overflow: scroll;
+  font-size: 25px;
+  color: black;
+  margin-left: -60%;
+  margin-top: 5%;
+}
+
+.time_card_body {
+  display: flexbox;
+  width: 150%;
+  flex-direction: col;
+  overflow: scroll;
+  font-size: 20px;
+  color: black;
+  height: 13.5vw;
+  margin-left: -60%;
+}
+
+.time_card_header_body {
+  text-align: center;
+  display: flexbox;
+}
+
+.time_card_title{
+    font-weight: bolder;
+    font-Size: 25px; 
+}

@@ -3,7 +3,7 @@ import logo from './Mesonet.png'
 
 const Navigation = () => {
   return (
-    <Navbar variant="dark" fixed="bottom" style={{"margin-top":"30px",height:"85px",background:"white",color:"black"}}>
+    <Navbar variant="dark" fixed="bottom" style={{"margin-top":"30px",height:"200px",background:"white",color:"black"}}>
       <Container>
         <Navbar.Brand style={{color:"black",fontWeight:"bold"}} href="/central-report">{<img src={logo} style={{width:"450px",height:"auto"}} alt="Logo" />} Operational Network Overview</Navbar.Brand>
         <Nav className="me-auto" >

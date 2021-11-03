@@ -1,0 +1,32 @@
+.tech_card_header {
+  display: flexbox;
+  width: 120%;
+  flex-direction: col;
+  overflow: scroll;
+  font-size: 25px;
+  color: black;
+  margin-left: -40%;
+}
+.tech_card_header_body {
+  text-align: center;
+  display: flexbox;
+}
+.tech_card_title {
+  font-weight: bolder;
+  font-size: 25px;
+}
+.tech_card_body{
+    display: flexbox;
+    width:120%;
+    flex-Direction: col;
+    overflow: scroll;
+    font-Size: 20px;
+    color: black;
+    height: 33.95vw;
+    margin-left: -40%;
+}
+.tech_list{
+    text-Align: center;
+    display: flexbox;
+    background: #f9f9f9;
+}
