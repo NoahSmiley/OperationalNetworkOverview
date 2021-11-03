@@ -1,6 +1,6 @@
 import { Navbar, Nav, Container} from 'react-bootstrap';
 import logo from './Mesonet.png'
-// "#9A1A20"
+
 const Navigation = () => {
   return (
     <Navbar variant="dark" fixed="bottom" style={{"margin-top":"30px",height:"85px",background:"white",color:"black"}}>

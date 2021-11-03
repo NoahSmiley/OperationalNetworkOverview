@@ -1,4 +1,4 @@
-import file from "../data.json";
+import file from "../Data/data.json";
 import { Card, ListGroupItem, ListGroup } from "react-bootstrap";
 
 const abrv = file.s;

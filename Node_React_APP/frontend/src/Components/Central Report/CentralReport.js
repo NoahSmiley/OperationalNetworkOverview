@@ -1,8 +1,8 @@
 import React from 'react';
-import BATV from './BATV';
-import DelayedTime from './DelayedTime';
-import PMAS from './PMAS';
-import Technician from './Technician';
+import BATV from '../BATV/BATV';
+import DelayedTime from '../Delayed/DelayedTime';
+import PMAS from '../PMAS/PMAS';
+import Technician from '../Technician/Technician';
 
 const CentralReport = () => {
     return (

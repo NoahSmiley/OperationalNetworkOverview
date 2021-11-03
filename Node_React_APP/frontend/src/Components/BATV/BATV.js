@@ -1,4 +1,4 @@
-import file from "../data.json";
+import file from "../Data/data.json";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./BATV.css";
@@ -32,7 +32,6 @@ const BATV = () => {
 
       {/* Card Body */}
       <Card className="card_body">
-
         {/* Maps Items from array to card list */}
         {arr.map((item) => (
           <ListGroup className="list-group-flush">
