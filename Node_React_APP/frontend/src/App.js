@@ -29,9 +29,9 @@ function App() {
   const history = useHistory();
   function handleArrowLeft() {
     if (history.location.pathname === "/images") {
-      history.push("/central-report");
+      history.push("/");
       window.location.reload(false);
-    } else if (history.location.pathname === "/central-report") {
+    } else if (history.location.pathname === "/") {
       console.log(history.location);
       history.push("/maps");
       window.location.reload(false);
@@ -45,16 +45,15 @@ function App() {
     if (history.location.pathname === "/images") {
       history.push("/maps");
       window.location.reload(false);
-    } else if (history.location.pathname === "/central-report") {
+    } else if (history.location.pathname === "/") {
       console.log(history.location);
       history.push("/images");
       window.location.reload(false);
     } else if (history.location.pathname === "/maps") {
       console.log(history.location);
-      history.push("/central-report");
+      history.push("/");
       window.location.reload(false);
     }
-  
   }
   useKey("ArrowLeft", handleArrowLeft);
   useKey("ArrowRight", handleArrowRight);
@@ -62,7 +61,7 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/central-report" component={CentralReport} />
+        <Route exact path="/" component={CentralReport} />
         <Route path="/images" component={ImageSlideShow} />
         <Route path="/maps" component={MapSlideShow} />
       </Switch>

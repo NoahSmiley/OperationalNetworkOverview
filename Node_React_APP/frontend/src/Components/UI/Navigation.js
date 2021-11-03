@@ -7,7 +7,7 @@ const Navigation = () => {
       <Container>
         <Navbar.Brand style={{color:"black",fontWeight:"bold"}} href="/central-report">{<img src={logo} style={{width:"450px",height:"auto"}} alt="Logo" />} Operational Network Overview</Navbar.Brand>
         <Nav className="me-auto" >
-            <Nav.Link style={{color:"black"}} href="/central-report">Central Report</Nav.Link>
+            <Nav.Link style={{color:"black"}} href="/">Central Report</Nav.Link>
             <Nav.Link style={{color:"black"}} href="/images">Images</Nav.Link>
             <Nav.Link style={{color:"black"}} href="/maps">Maps</Nav.Link>
         </Nav>
