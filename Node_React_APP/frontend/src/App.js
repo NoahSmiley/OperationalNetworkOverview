@@ -7,6 +7,7 @@ import ImageSlideShow from "./Components/Slideshow/ImageSlideShow";
 import MapSlideShow from "./Components/Slideshow/MapSlideShow";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
 import { useHistory } from "react-router";
+import GoogleFontLoader from "react-google-font-loader";
 
 function useKey(key, cb) {
   const callbackRef = useRef(cb);
@@ -25,7 +26,6 @@ function useKey(key, cb) {
 }
 
 function App() {
-
   const history = useHistory();
   function handleArrowLeft() {
     if (history.location.pathname === "/images") {
@@ -45,7 +45,6 @@ function App() {
     if (history.location.pathname === "/images") {
       history.push("/maps");
       window.location.reload(false);
-
     } else if (history.location.pathname === "/") {
       console.log(history.location);
       history.push("/images");
@@ -60,7 +59,7 @@ function App() {
   useKey("ArrowRight", handleArrowRight);
 
   return (
-    <div>
+    <div style={{"font-family": 'Roboto',"letter-spacing": '0.075em'}}>
       <Switch>
         <Route exact path="/" component={CentralReport} />
         <Route exact path="/images" component={ImageSlideShow} />

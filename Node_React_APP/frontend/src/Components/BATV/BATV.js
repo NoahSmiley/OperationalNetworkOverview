@@ -2,7 +2,6 @@ import file from "../Data/data.json";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./BATV.css";
-
 //Declaring path to Country Abbreviation and BATV Values
 const abrv = file.s;
 const batv = file.BATV;
@@ -22,7 +21,8 @@ var arr = Array.from(result.entries());
 
 const BATV = () => {
   return (
-    <div>
+    <div style={{"font-family": 'Roboto'}}>
+      
       {/* Card Header */}
       <Card className="card_header">
         <Card.Body className="card_header_body">

@@ -6,10 +6,13 @@
   font-size: 20px;
   color: black;
   margin-left: -20%;
+  margin-bottom: -7%;
+
 }
 .pmas_card_header_body {
   text-align: center;
   display: flexbox;
+
 }
 .pmas_card_body {
   display: flexbox;

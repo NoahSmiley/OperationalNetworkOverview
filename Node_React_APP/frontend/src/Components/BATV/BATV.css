@@ -6,11 +6,14 @@
   font-size: 25px;
   color: black;
   margin-left: -15%;
+  margin-bottom: -7%;
+
 }
 
 .card_title {
   font-weight: bolder;
   font-size: 25px;
+
 }
 
 .card_header_body{
