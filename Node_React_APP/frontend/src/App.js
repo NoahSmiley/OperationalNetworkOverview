@@ -29,9 +29,9 @@ function App() {
   const history = useHistory();
   function handleArrowLeft() {
     if (history.location.pathname === "/images") {
-      history.push("/");
+      history.push("/central-report");
       window.location.reload(false);
-    } else if (history.location.pathname === "/") {
+    } else if (history.location.pathname === "/central-report") {
       console.log(history.location);
       history.push("/maps");
       window.location.reload(false);
@@ -51,7 +51,7 @@ function App() {
       window.location.reload(false);
     } else if (history.location.pathname === "/maps") {
       console.log(history.location);
-      history.push("/");
+      history.push("/central-report");
       window.location.reload(false);
     }
   }
@@ -61,7 +61,7 @@ function App() {
   return (
     <div style={{"font-family": 'Roboto',"letter-spacing": '0.075em'}}>
       <Switch>
-        <Route exact path="/" component={CentralReport} />
+        <Route exact path="/central-report" component={CentralReport} />
         <Route exact path="/images" component={ImageSlideShow} />
         <Route exact path="/maps" component={MapSlideShow} />
       </Switch>
