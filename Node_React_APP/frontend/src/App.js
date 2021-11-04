@@ -7,7 +7,6 @@ import ImageSlideShow from "./Components/Slideshow/ImageSlideShow";
 import MapSlideShow from "./Components/Slideshow/MapSlideShow";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
 import { useHistory } from "react-router";
-import GoogleFontLoader from "react-google-font-loader";
 
 function useKey(key, cb) {
   const callbackRef = useRef(cb);
@@ -45,7 +44,7 @@ function App() {
     if (history.location.pathname === "/images") {
       history.push("/maps");
       window.location.reload(false);
-    } else if (history.location.pathname === "/") {
+    } else if (history.location.pathname === "/central-report") {
       console.log(history.location);
       history.push("/images");
       window.location.reload(false);
